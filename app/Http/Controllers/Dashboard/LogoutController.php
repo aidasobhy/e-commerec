@@ -3,15 +3,15 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Traits\GuardTrait;
+use App\Traits\AdminGuardTrait;
 
 
 class LogoutController extends Controller
 {
-    use GuardTrait;
+    use AdminGuardTrait;
 
     public function logout(){
-         $guard=$this->getGuard();
+         $guard=$this->getAdmin();
          $guard->logout();
 
          return redirect()->route('admin.login');

@@ -14,12 +14,14 @@ return [
     */
 
 
-    'welcome'=>'مرحبا',
-    'edit profile'=>'تعديل الملف الشحصي',
-    'log out'=>'تسجيل الخروج',
-    'language'=>'اللغات',
-    'arabic'=>'عربي',
-    'english'=>'انجليزي',
+    'main profile'=>'Main',
+    'profile'=>'Profile',
+    'edit profile'=>'Edit profile information',
+    'name'=>'Name',
+    'email'=>'E-mail',
+    'new password'=>'New Password',
+    'confirm password'=>'Confirm Password',
+    'profile save'=>'Save',
 
 
 ];

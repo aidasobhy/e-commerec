@@ -13,13 +13,13 @@ return [
     |
     */
 
-
-    'welcome'=>'مرحبا',
-    'edit profile'=>'تعديل الملف الشحصي',
-    'log out'=>'تسجيل الخروج',
-    'language'=>'اللغات',
-    'arabic'=>'عربي',
-    'english'=>'انجليزي',
-
+    'main profile'=>'الرئيسية',
+    'profile'=>'الملف الشخصي',
+    'edit profile'=>'تعديل بيانات الملف الشخصي',
+    'name'=>'الاسم',
+    'email'=>'البريد',
+    'new password'=>'كلمة المرور الجديده',
+    'confirm password'=>'تاكيد كلمة المرور ',
+    'profile save'=>'حفظ',
 
 ];

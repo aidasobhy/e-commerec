@@ -16,6 +16,9 @@ return [
     'welcome'=>'Welcome',
     'edit profile'=>'Edit Profile',
     'log out'=>'Log Out',
+    'language'=>'Language',
+    'arabic'=>'Arabic',
+    'english'=>'English',
 
 
 
