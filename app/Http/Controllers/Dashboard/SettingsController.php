@@ -20,7 +20,6 @@ class SettingsController extends Controller
         else
             $shippingMethod = Setting::where('key', 'free_shipping_label')->first();
 
-
         return view('dashboard.settings.shippings.edit', compact('shippingMethod'));
     }
 
