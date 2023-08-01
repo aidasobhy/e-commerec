@@ -37,8 +37,9 @@
                             {{--                            <span class="avatar avatar-online">--}}
                             {{--                  <img  style="height: 35px;" src="" alt="avatar"><i></i></span>--}}
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
-                                    class="ft-user"></i> {{__('Admin\header.edit profile')}}</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="{{route('edit.profile')}}">
+                                <i class="ft-user"></i> {{__('Admin\header.edit profile')}}</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{route('admin.logout')}}"><i class="ft-power"></i>
                                 {{__('Admin\header.log out')}} </a>
