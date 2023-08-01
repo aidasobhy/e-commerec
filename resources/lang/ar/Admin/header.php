@@ -17,6 +17,9 @@ return [
     'welcome'=>'مرحبا',
     'edit profile'=>'تعديل الملف الشحصي',
     'log out'=>'تسجيل الخروج',
+    'language'=>'اللغات',
+    'arabic'=>'عربي',
+    'english'=>'انجليزي',
 
 
 ];

@@ -2,11 +2,10 @@
 
 namespace App\Traits;
 
-trait GuardTrait
+trait AdminGuardTrait
 {
-    public function getGuard()
+    public function getAdmin()
     {
         return auth('admin');
     }
-
 }
