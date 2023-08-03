@@ -25,7 +25,17 @@ return [
     'admin email must be unique' => 'This Email Exists',
     'admin password confirm' => 'Confirm Password',
     'admin password min' => 'Password must not be less than 6 numbers or letters',
+
     'profile error' => 'Error In Updating',
     'profile success' => 'Updated Added Successfully',
+
+
+    'cat update success'=>'Updated Added Successfully',
+    'cat update error'=>'Error In Updating',
+
+    'cat delete success'=>'Deleted Added Successfully',
+    'cat delete error'=>'Error In Deleting',
+
+
 
 ];
