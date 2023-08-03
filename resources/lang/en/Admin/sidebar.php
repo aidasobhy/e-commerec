@@ -19,5 +19,11 @@ return [
     'local shipping'=>'Local Shipping',
     'flat rate'=>'Flat Rate',
 
+    'main cats'=>'Main Categories',
+    'show all'=>'Show All',
+    'add main cats'=>'Add New Main Category',
 
+    'sub cats'=>'SubCategories',
+    'add sub cats'=>'Add New SubCategories',
 ];
+

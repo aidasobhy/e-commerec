@@ -30,4 +30,15 @@ return [
     'profile error'=>'خظا في تحديث البيانات',
     'profile success'=>'تم التحديث بنجاح',
 
+
+    'cat update success'=>'تم التحديث بنجاح',
+    'cat update error'=>'خظا في تحديث البيانات',
+
+    'cat add success'=>'تم الاضافة بنجاح',
+    'cat add error'=>'خظا في اضافة البيانات',
+
+    'cat delete success'=>'تم الحذف بنجاح',
+    'cat delete error'=>'خظا في حذف البيانات',
+
+
 ];
