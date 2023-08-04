@@ -64,7 +64,21 @@ Route::group(
 
         });
         ############################end sub-categories routes######
+
+        ############################begin brands routes######
+        Route::group(['prefix' => 'brands'], function () {
+            Route::get('/', 'BrandsController@index')->name('admin.brands');
+            Route::get('create', 'BrandsController@create')->name('admin.brands.create');
+            Route::post('store', 'BrandsController@store')->name('admin.brands.store');
+            Route::get('edit/{id}', 'BrandsController@edit')->name('admin.brands.edit');
+            Route::post('update/{id}', 'BrandsController@update')->name('admin.brands.update');
+            Route::get('delete/{id}', 'BrandsController@delete')->name('admin.brands.delete');
+
+        });
+        ############################end sub-categories routes######
     });
+
+
 
     Route::group(['namespace' => 'Dashboard', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
         Route::get('login', 'LoginController@login')->name('admin.login');

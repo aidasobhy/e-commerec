@@ -32,9 +32,16 @@ return [
 
     'cat update success'=>'Updated Added Successfully',
     'cat update error'=>'Error In Updating',
-
     'cat delete success'=>'Deleted Added Successfully',
     'cat delete error'=>'Error In Deleting',
+    'cat add success'=>'Category Added Successfully',
+
+    'brand add error'=>'Error In Add Details',
+    'brand update success'=>'Updated Added Successfully',
+    'brand update error'=>'Error In Updating',
+    'brand delete success'=>'Deleted Added Successfully',
+    'brand delete error'=>'Error In Deleting',
+    'brand add success'=>'Brand Added Successfully',
 
 
 

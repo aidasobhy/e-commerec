@@ -41,4 +41,13 @@ return [
     'cat delete error'=>'خظا في حذف البيانات',
 
 
+
+    'brand update success'=>'تم التحديث بنجاح',
+    'brand update error'=>'خظا في تحديث البيانات',
+    'brand add success'=>'تم الاضافة بنجاح',
+    'brand add error'=>'خظا في اضافة البيانات',
+    'brand delete success'=>'تم الحذف بنجاح',
+    'brand delete error'=>'خظا في حذف البيانات',
+
+
 ];

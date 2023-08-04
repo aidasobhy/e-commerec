@@ -25,5 +25,9 @@ return [
 
     'sub cats'=>'SubCategories',
     'add sub cats'=>'Add New SubCategories',
+
+
+    'brands'=>'Brands',
+    'add brands'=>'Add New Brand',
 ];
 
