@@ -14,13 +14,17 @@ return [
     */
 
 
-    'main categories'=>'الاقسام الرئسية',
+    'categories'=>'اقسام المتجر',
     'main'=>'الرئسية',
-    'all main categories'=>'جميع الاقسام الرئيسية',
+
+    'main categories'=>' الاقسام الرئيسية ',
+    'all main categories'=>' الاقسام الرئيسية ',
     'cat_name'=>'الاسم',
-    'cat_main'=>'القسم الرئيسي',
-    'edit cat_main'=>'تعديل قسم رئيسي ',
-    'add cat_main'=>'اضافة قسم رئيسي ',
+    'category name'=>'القسم الرئيسي',
+    'add category'=>'Add  Category',
+
+    'edit cat_main'=>'تعديل قسم  ',
+
     'cat_slug'=>'الاسم بالرابط',
     'cat_status'=>'الحالة',
     'cat_image'=>'صوره القسم',
@@ -37,11 +41,15 @@ return [
     'cat info back'=>'تراجع',
     'cat info update'=>'تحديث',
     'cat info save'=>'حفظ',
-
+    'main cat'=>'قسم رئيسي',
+    'sub cat'=>'قسم فرعي',
     'cat not found'=>'هذا القسم غير موجود',
     'name required'=>'يجب ادخال الاسم',
     'slug required'=>'يجب ادخال اسم بالرابط',
     'slug unique'=>'هذا الاسم موجود من قبل',
+
+    'choose main cat'=>'اختر القسم الرئيسي',
+    'choose  cat'=>'  من فضلك اختر القسم',
 
 
 ];

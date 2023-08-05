@@ -44,5 +44,14 @@ return [
     'brand add success'=>'Brand Added Successfully',
 
 
+    'tag add error'=>'Error In Add Details',
+    'tag update success'=>'Updated Added Successfully',
+    'tag update error'=>'Error In Updating',
+    'tag delete success'=>'
+    Tag Deleted Successfully',
+    'tag delete error'=>'Error In Deleting',
+    'tag add success'=>'Brand Added Successfully',
+
+
 
 ];

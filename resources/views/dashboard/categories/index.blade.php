@@ -50,9 +50,10 @@
                                              <thead class="">
                                              <tr>
                                                  <th>{{__('Admin\categories.cat_name')}} </th>
+                                                 <th> {{__('Admin\categories.cat_name')}}  </th>
                                                  <th> {{__('Admin\categories.cat_slug')}} </th>
                                                  <th>{{__('Admin\categories.cat_status')}}</th>
-                                                 <th>{{__('Admin\categories.cat_image')}}</th>
+{{--                                                 <th>{{__('Admin\categories.cat_image')}}</th>--}}
                                                  <th>{{__('Admin\categories.operations')}}</th>
                                              </tr>
                                              </thead>
@@ -62,19 +63,20 @@
                                                  @foreach($categories as $category)
                                                      <tr>
                                                          <td>{{$category -> name}}</td>
+                                                         <td>{{$category -> _parent->name ??'--'}}</td>
                                                          <td>{{$category -> slug}}</td>
                                                          <td>{{$category -> getActive()}}</td>
-                                                         <td> <img style="width: 150px; height: 100px;" src=" "></td>
+{{--                                                         <td> <img style="width: 150px; height: 100px;" src=" "></td>--}}
                                                          <td>
                                                              <div class="btn-group" role="group"
                                                                   aria-label="Basic example">
-                                                                 <a href="{{route('admin.mainCategories.edit',$category -> id)}}"
+                                                                 <a href="{{route('admin.categories.edit',$category -> id)}}"
                                                                     class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
                                                                      {{__('Admin\categories.edit')}}
                                                                  </a>
 
 
-                                                                 <a href="{{route('admin.mainCategories.delete',$category -> id)}}"
+                                                                 <a href="{{route('admin.categories.delete',$category -> id)}}"
                                                                     class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
                                                                      {{__('Admin\categories.delete')}}
                                                                  </a>

@@ -13,22 +13,24 @@ return [
     |
     */
 
-    'settings'=>'Settings',
-    'shipping method'=>'Shipping Method',
-    'free shipping'=>'Free Shipping',
-    'local shipping'=>'Local Shipping',
-    'flat rate'=>'Flat Rate',
+    'main'=>'Main',
+    'tags'=>'Tags',
+    'add tag'=>'Add Tags ',
+    'tag name'=>'Name',
+    'tag slug'=>'Slug',
+    'tag back'=>'Back',
+    'tag save'=>'Save',
 
-    'categories'=>'Categories',
-    'show all'=>'Show All',
-    'add category'=>'Add New Category',
+    'tag operations'=>'Operations',
+    'tag edit'=>'Edit',
+    'tag delete'=>'Delete',
+    'tag update'=>'Update',
+    'tag info'=>'Details',
 
 
+    'name required'=>'Name is Required',
+    'slug required'=>'Slug is Required',
 
-    'brands'=>'Brands',
-    'add brands'=>'Add New Brand',
+    'tag not found'=>'Tag Not Found'
 
-    'tags'=>' Tags',
-    'add tag'=>'Add New Tag'
 ];
-

@@ -55,6 +55,8 @@ class Category extends Model
         return $this->is_active==0?__('Admin\categories.no_active'):__('Admin\categories.active');
     }
 
+
+
     public function _parent()
     {
         return $this->belongsTo(self::class,'parent_id');

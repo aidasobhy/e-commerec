@@ -1,6 +1,5 @@
 @extends('layouts.admin')
  @section('content')
-
      <div class="app-content content">
          <div class="content-wrapper">
              <div class="content-header row">
@@ -8,11 +7,11 @@
                      <div class="row breadcrumbs-top">
                          <div class="breadcrumb-wrapper col-12">
                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="">{{__('Admin\subcategories.sub')}}</a>
+                                 <li class="breadcrumb-item"><a href=""> {{__('Admin\tags.main')}}</a>
                                  </li>
-                                 <li class="breadcrumb-item"><a href="{{route('admin.subCategories')}}"> {{__('Admin\subcategories.sub categories')}} </a>
+                                 <li class="breadcrumb-item"><a href="{{route('admin.tags')}}"> {{__('Admin\tags.tags')}}</a>
                                  </li>
-                                 <li class="breadcrumb-item active">{{__('Admin\subcategories.add cat_sub')}}
+                                 <li class="breadcrumb-item active">{{__('Admin\tags.add tag')}}
                                  </li>
                              </ol>
                          </div>
@@ -26,7 +25,6 @@
                          <div class="col-md-12">
                              <div class="card">
                                  <div class="card-header">
-                                     <h4 class="card-title" id="basic-layout-form"> {{__('Admin\subcategories.add cat_sub')}} </h4>
                                      <a class="heading-elements-toggle"><i
                                              class="la la-ellipsis-v font-medium-3"></i></a>
                                      <div class="heading-elements">
@@ -38,54 +36,23 @@
                                          </ul>
                                      </div>
                                  </div>
-                                 @include('dashboard.alerts.errors')
                                  @include('dashboard.alerts.success')
+                                 @include('dashboard.alerts.errors')
                                  <div class="card-content collapse show">
                                      <div class="card-body">
                                          <form class="form"
-                                               action="{{route('admin.subCategories.store')}}"
+                                               action="{{route('admin.tags.store')}}"
                                                method="POST"
                                                enctype="multipart/form-data">
                                              @csrf
 
 
-                                             <div class="form-group">
-                                                 <label> {{__('Admin\subcategories.cat info image')}} </label>
-                                                 <label id="projectinput7" class="file center-block">
-                                                     <input type="file" id="file" name="photo">
-                                                     <span class="file-custom"></span>
-                                                 </label>
-                                                 @error('photo')
-                                                 <span class="text-danger">{{$message}}</span>
-                                                 @enderror
-                                             </div>
-
                                              <div class="form-body">
 
-                                                 <h4 class="form-section"><i class="ft-home"></i> {{__('Admin\subcategories.cat info')}}</h4>
                                                  <div class="row">
-                                                     <div class="col-md-12">
-                                                         <div class="form-group">
-                                                             <label for="projectinput1"> {{__('Admin\subcategories.sub cat')}}
-                                                             </label>
-                                                             <select name="parent_id" class="select2 form-control">
-                                                                 <optgroup label="{{__('Admin\subcategories.choose sub cat')}}">
-                                                                     @if($categories && $categories->count() >0)
-                                                                         @foreach($categories as $category)
-                                                                             <option value="{{$category->id}}">{{$category->name}}</option>
-                                                                         @endforeach
-                                                                     @endif
-                                                                 </optgroup>
-                                                             </select>
-                                                             @error("category_id")
-                                                             <span class="text-danger">{{$message}}</span>
-                                                             @enderror
-                                                         </div>
-                                                     </div>
-
                                                      <div class="col-md-6">
                                                          <div class="form-group">
-                                                             <label for="projectinput1"> {{__('Admin\subcategories.sub cat info name')}}
+                                                             <label for="projectinput1">  {{__('Admin\tags.tag name')}}
                                                              </label>
                                                              <input type="text" id="name"
                                                                     class="form-control"
@@ -100,7 +67,7 @@
 
                                                      <div class="col-md-6">
                                                          <div class="form-group">
-                                                             <label for="projectinput1"> {{__('Admin\subcategories.cat info slug')}}
+                                                             <label for="projectinput1"> {{__('Admin\tags.tag slug')}}
                                                              </label>
                                                              <input type="text" id="name"
                                                                     class="form-control"
@@ -112,36 +79,21 @@
                                                              @enderror
                                                          </div>
                                                      </div>
-                                                 </div>
 
-                                                 <div class="row">
-                                                     <div class="col-md-6">
-                                                         <div class="form-group mt-1">
-                                                             <input type="checkbox" value="1"
-                                                                    name="is_active"
-                                                                    id="switcheryColor4"
-                                                                    class="switchery" data-color="success"
-                                                                    checked/>
-                                                             <label for="switcheryColor4"
-                                                                    class="card-title ml-1">{{__('Admin\subcategories.cat info status')}}  </label>
 
-                                                             @error("is_active")
-                                                             <span class="text-danger">{{$message }}</span>
-                                                             @enderror
-                                                         </div>
-                                                     </div>
 
                                                  </div>
+
                                              </div>
 
 
                                              <div class="form-actions">
                                                  <button type="button" class="btn btn-warning mr-1"
                                                          onclick="history.back();">
-                                                     <i class="ft-x"></i> {{__('Admin\subcategories.cat info back')}}
+                                                     <i class="ft-x"></i> {{__('Admin\tags.tag back')}}
                                                  </button>
                                                  <button type="submit" class="btn btn-primary">
-                                                     <i class="la la-check-square-o"></i> {{__('Admin\subcategories.cat info save')}}
+                                                     <i class="la la-check-square-o"></i> {{__('Admin\tags.tag save')}}
                                                  </button>
                                              </div>
                                          </form>
