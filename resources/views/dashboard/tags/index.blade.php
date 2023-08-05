@@ -1,19 +1,17 @@
 @extends('layouts.admin')
  @section('content')
+
      <div class="app-content content">
          <div class="content-wrapper">
-
-
              <div class="content-header row">
                  <div class="content-header-left col-md-6 col-12 mb-2">
-                     <h3 class="content-header-title">{{__('Admin\subcategories.sub categories')}}</h3>
+                     <h3 class="content-header-title"> Tags </h3>
                      <div class="row breadcrumbs-top">
                          <div class="breadcrumb-wrapper col-12">
                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">
-                                         {{__('Admin\subcategories.main')}}</a>
+                                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">{{__('Admin\tags.main')}}</a>
                                  </li>
-                                 <li class="breadcrumb-item active"> {{__('Admin\subcategories.sub categories')}}
+                                 <li class="breadcrumb-item active"> {{__('Admin\tags.tags')}}
                                  </li>
                              </ol>
                          </div>
@@ -27,7 +25,6 @@
                          <div class="col-12">
                              <div class="card">
                                  <div class="card-header">
-                                     <h4 class="card-title">{{__('Admin\subcategories.all sub categories')}} </h4>
                                      <a class="heading-elements-toggle"><i
                                              class="la la-ellipsis-v font-medium-3"></i></a>
                                      <div class="heading-elements">
@@ -46,40 +43,32 @@
                                  <div class="card-content collapse show">
                                      <div class="card-body card-dashboard">
                                          <table
-                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
+                                             class="table display nowrap table-striped table-bordered ">
                                              <thead class="">
                                              <tr>
-                                                 <th>{{__('Admin\subcategories.cat_name')}} </th>
-{{--                                                 <th>{{__('Admin\categories.cat_main')}}</th>--}}
-                                                 <th> {{__('Admin\subcategories.cat_slug')}} </th>
-                                                 <th>{{__('Admin\subcategories.cat_status')}}</th>
-                                                 <th>{{__('Admin\subcategories.cat_image')}}</th>
-                                                 <th>{{__('Admin\subcategories.operations')}}</th>
+                                                 <th>{{__('Admin\tags.tag name')}} </th>
+                                                 <th> {{__('Admin\tags.tag slug')}}</th>
+                                                 <th> {{__('Admin\tags.tag operations')}}</th>
                                              </tr>
                                              </thead>
                                              <tbody>
 
-                                             @isset($categories)
-                                                 @foreach($categories as $category)
+                                             @isset($tags)
+                                                 @foreach($tags as $tag)
                                                      <tr>
-                                                         <td>{{$category -> name}}</td>
-{{--                                                         <td>{{$category -> _parent -> name  ?? '--' }}</td>--}}
-                                                         <td>{{$category -> slug}}</td>
-                                                         <td>{{$category -> getActive()}}</td>
-                                                         <td> <img style="width: 150px; height: 100px;" src=" "></td>
+                                                         <td>{{$tag -> name}}</td>
+                                                         <td>{{$tag ->  slug}}</td>
                                                          <td>
                                                              <div class="btn-group" role="group"
                                                                   aria-label="Basic example">
-                                                                 <a href="{{route('admin.subCategories.edit',$category -> id)}}"
-                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                     {{__('Admin\subcategories.edit')}}
-                                                                 </a>
+                                                                 <a href="{{route('admin.tags.edit',$tag -> id)}}"
+                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">{{__('Admin\tags.tag edit')}}</a>
 
 
-                                                                 <a href="{{route('admin.subCategories.delete',$category -> id)}}"
-                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                     {{__('Admin\subcategories.delete')}}
-                                                                 </a>
+                                                                 <a href="{{route('admin.tags.delete',$tag -> id)}}"
+                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">{{__('Admin\tags.tag delete')}}</a>
+
+
 
                                                              </div>
                                                          </td>

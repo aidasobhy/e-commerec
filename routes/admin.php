@@ -40,31 +40,48 @@ Route::group(
         });
         #########################end settings profile routes#########
 
-        ############################begin main-categories routes######
-        Route::group(['prefix' => 'main-categories'], function () {
-            Route::get('/', 'MainCategoriesController@index')->name('admin.mainCategories');
-            Route::get('create', 'MainCategoriesController@create')->name('admin.mainCategories.create');
-            Route::post('store', 'MainCategoriesController@store')->name('admin.mainCategories.store');
-            Route::get('edit/{id}', 'MainCategoriesController@edit')->name('admin.mainCategories.edit');
-            Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.mainCategories.update');
-            Route::get('delete/{id}', 'MainCategoriesController@delete')->name('admin.mainCategories.delete');
+        ############################begin categories routes######
+        Route::group(['prefix' => 'categories'], function () {
+            Route::get('/', 'CategoriesController@index')->name('admin.categories');
+            Route::get('create', 'CategoriesController@create')->name('admin.categories.create');
+            Route::post('store', 'CategoriesController@store')->name('admin.categories.store');
+            Route::get('edit/{id}', 'CategoriesController@edit')->name('admin.categories.edit');
+            Route::post('update/{id}', 'CategoriesController@update')->name('admin.categories.update');
+            Route::get('delete/{id}', 'CategoriesController@delete')->name('admin.categories.delete');
 
         });
-        ############################end main-categories routes######
+        ############################end categories routes######
 
 
-        ############################begin sub-categories routes######
-        Route::group(['prefix' => 'sub-categories'], function () {
-            Route::get('/', 'SubCategoriesController@index')->name('admin.subCategories');
-            Route::get('create', 'SubCategoriesController@create')->name('admin.subCategories.create');
-            Route::post('store', 'SubCategoriesController@store')->name('admin.subCategories.store');
-            Route::get('edit/{id}', 'SubCategoriesController@edit')->name('admin.subCategories.edit');
-            Route::post('update/{id}', 'SubCategoriesController@update')->name('admin.subCategories.update');
-            Route::get('delete/{id}', 'SubCategoriesController@delete')->name('admin.subCategories.delete');
+
+        ############################begin brands routes######
+        Route::group(['prefix' => 'brands'], function () {
+            Route::get('/', 'BrandsController@index')->name('admin.brands');
+            Route::get('create', 'BrandsController@create')->name('admin.brands.create');
+            Route::post('store', 'BrandsController@store')->name('admin.brands.store');
+            Route::get('edit/{id}', 'BrandsController@edit')->name('admin.brands.edit');
+            Route::post('update/{id}', 'BrandsController@update')->name('admin.brands.update');
+            Route::get('delete/{id}', 'BrandsController@delete')->name('admin.brands.delete');
 
         });
-        ############################end sub-categories routes######
+        ############################end brands routes######
+
+        ############################begin tags routes######
+        Route::group(['prefix' => 'tags'], function () {
+            Route::get('/', 'TagsController@index')->name('admin.tags');
+            Route::get('create', 'TagsController@create')->name('admin.tags.create');
+            Route::post('store', 'TagsController@store')->name('admin.tags.store');
+            Route::get('edit/{id}', 'TagsController@edit')->name('admin.tags.edit');
+            Route::post('update/{id}', 'TagsController@update')->name('admin.tags.update');
+            Route::get('delete/{id}', 'TagsController@delete')->name('admin.tags.delete');
+
+        });
+        ############################end tags routes######
+
+
     });
+
+
 
     Route::group(['namespace' => 'Dashboard', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
         Route::get('login', 'LoginController@login')->name('admin.login');

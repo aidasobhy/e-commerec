@@ -7,11 +7,11 @@
                      <div class="row breadcrumbs-top">
                          <div class="breadcrumb-wrapper col-12">
                              <ol class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="">{{__('Admin\categories.main')}}</a>
+                                 <li class="breadcrumb-item"><a href="">{{__('Admin\tags.main')}} </a>
                                  </li>
-                                 <li class="breadcrumb-item"><a href=""> {{__('Admin\categories.main categories')}} </a>
+                                 <li class="breadcrumb-item"><a href="{{route('admin.tags')}}"> {{__('Admin\tags.tags')}} </a>
                                  </li>
-                                 <li class="breadcrumb-item active"> {{__('Admin\categories.edit')}} - {{$category -> name}}
+                                 <li class="breadcrumb-item active"> {{__('Admin\tags.tag edit')}} - {{$tag -> name}}
                                  </li>
                              </ol>
                          </div>
@@ -25,7 +25,7 @@
                          <div class="col-md-12">
                              <div class="card">
                                  <div class="card-header">
-                                     <h4 class="card-title" id="basic-layout-form">{{__('Admin\categories.edit cat_main')}}</h4>
+                                     <h4 class="card-title" id="basic-layout-form"> {{__('Admin\tags.tag edit')}} tags </h4>
                                      <a class="heading-elements-toggle"><i
                                              class="la la-ellipsis-v font-medium-3"></i></a>
                                      <div class="heading-elements">
@@ -42,60 +42,40 @@
                                  <div class="card-content collapse show">
                                      <div class="card-body">
                                          <form class="form"
-                                               action="{{route('admin.categories.update',$category -> id)}}"
+                                               action="{{route('admin.tags.update',$tag -> id)}}"
                                                method="POST"
                                                enctype="multipart/form-data">
                                              @csrf
 
-                                             <input name="id" value="{{$category -> id}}" type="hidden">
+                                             <input name="id" value="{{$tag -> id}}" type="hidden">
 
-                                             <div class="form-group">
-                                                 <div class="text-center">
-                                                     <img
-                                                         src=""
-                                                         class="rounded-circle  height-150" alt="{{__('Admin\categories.cat info image')}}">
-                                                 </div>
-                                             </div>
-
-
-                                             <div class="form-group">
-                                                 <label>{{__('Admin\categories.cat info image')}}</label>
-                                                 <label id="projectinput7" class="file center-block">
-                                                     <input type="file" id="file" name="photo">
-                                                     <span class="file-custom"></span>
-                                                 </label>
-                                                 @error('photo')
-                                                 <span class="text-danger">{{$message}}</span>
-                                                 @enderror
-                                             </div>
 
                                              <div class="form-body">
 
-                                                 <h4 class="form-section"><i class="ft-home"></i> {{__('Admin\categories.cat info')}}</h4>
+                                                 <h4 class="form-section"><i class="ft-home"></i> {{__('Admin\tags.tag info')}} tags </h4>
                                                  <div class="row">
                                                      <div class="col-md-6">
                                                          <div class="form-group">
-                                                             <label for="projectinput1">  {{__('Admin\categories.cat info name')}}
+                                                             <label for="projectinput1"> {{__('Admin\tags.tag name')}}
                                                              </label>
                                                              <input type="text" id="name"
                                                                     class="form-control"
                                                                     placeholder="  "
-                                                                    value="{{$category -> name}}"
+                                                                    value="{{$tag -> name}}"
                                                                     name="name">
                                                              @error("name")
                                                              <span class="text-danger">{{$message}}</span>
                                                              @enderror
                                                          </div>
                                                      </div>
-
                                                      <div class="col-md-6">
                                                          <div class="form-group">
-                                                             <label for="projectinput1"> {{__('Admin\categories.cat info slug')}}
+                                                             <label for="projectinput1">{{__('Admin\tags.tag slug')}}
                                                              </label>
                                                              <input type="text" id="name"
                                                                     class="form-control"
                                                                     placeholder="  "
-                                                                    value="{{$category -> slug}}"
+                                                                    value="{{$tag -> slug}}"
                                                                     name="slug">
                                                              @error("slug")
                                                              <span class="text-danger">{{$message}}</span>
@@ -103,42 +83,17 @@
                                                          </div>
                                                      </div>
 
-
-
-
-
                                                  </div>
-                                                 <div class="row">
-                                                     <div class="col-md-6">
-                                                         <div class="form-group mt-1">
-                                                             <input type="checkbox" value="1"
-                                                                    name="is_active"
-                                                                    id="switcheryColor4"
-                                                                    class="switchery" data-color="success"
-                                                                    @if($category -> is_active == 1)checked @endif/>
-                                                             <label for="switcheryColor4"
-                                                                    class="card-title ml-1">{{__('Admin\categories.cat info status')}}  </label>
 
-                                                             @error("is_active")
-                                                             <span class="text-danger">{{$message }}</span>
-                                                             @enderror
-                                                         </div>
-                                                     </div>
-
-
-
-
-                                                 </div>
                                              </div>
-
 
                                              <div class="form-actions">
                                                  <button type="button" class="btn btn-warning mr-1"
                                                          onclick="history.back();">
-                                                     <i class="ft-x"></i> {{__('Admin\categories.cat info back')}}
+                                                     <i class="ft-x"></i> {{__('Admin\tags.tag back')}}
                                                  </button>
                                                  <button type="submit" class="btn btn-primary">
-                                                     <i class="la la-check-square-o"></i> {{__('Admin\categories.cat info update')}}
+                                                     <i class="la la-check-square-o"></i> {{__('Admin\tags.tag update')}}
                                                  </button>
                                              </div>
                                          </form>

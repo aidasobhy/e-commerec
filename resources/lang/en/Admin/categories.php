@@ -14,9 +14,14 @@ return [
     */
 
 
-    'main categories'=>'Main Categories',
+    'categories'=>' Categories',
     'main'=>'Main',
-    'all main categories'=>'All Main Categories',
+
+
+    'main categories'=>'Main Categories',
+    'all main categories'=>'Main Categories',
+    'category name'=>'MainCategory ',
+
     'cat_name'=>'Name',
     'cat_main'=>'Main Categories',
     'cat_slug'=>'Slug',
@@ -28,8 +33,9 @@ return [
     'active'=>'Active',
     'no_active'=>'No Active',
     'cat info'=>'Category Information',
-    'edit cat_main'=>'Edit Main Category',
-    'add cat_main'=>'Add Main Category',
+    'edit cat_main'=>'Edit  Category',
+
+    'add category'=>'Add  Category',
     'cat info name'=>'Name',
     'cat info slug'=>'Slug',
     'cat info status'=>'Status',
@@ -42,6 +48,13 @@ return [
     'name required'=>'Name is Required',
     'slug required'=>'Slug Is Required',
     'slug unique'=>'This Slug  existed',
+
+    'main cat'=>'Main Category',
+    'sub cat'=>'SubCategory',
+
+
+    'choose main cat'=>'Choose MainCategory',
+    'choose  cat'=>'     Choose Category',
 
 
 ];

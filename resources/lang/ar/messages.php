@@ -33,12 +33,28 @@ return [
 
     'cat update success'=>'تم التحديث بنجاح',
     'cat update error'=>'خظا في تحديث البيانات',
-
     'cat add success'=>'تم الاضافة بنجاح',
     'cat add error'=>'خظا في اضافة البيانات',
-
     'cat delete success'=>'تم الحذف بنجاح',
     'cat delete error'=>'خظا في حذف البيانات',
+
+
+
+    'brand update success'=>'تم التحديث بنجاح',
+    'brand update error'=>'خظا في تحديث البيانات',
+    'brand add success'=>'تم الاضافة بنجاح',
+    'brand add error'=>'خظا في اضافة البيانات',
+    'brand delete success'=>'تم الحذف بنجاح',
+    'brand delete error'=>'خظا في حذف البيانات',
+
+
+
+    'tag update success'=>'تم التحديث بنجاح',
+    'tag update error'=>'خظا في تحديث البيانات',
+    'tag add success'=>'تم الاضافة بنجاح',
+    'tag add error'=>'خظا في اضافة البيانات',
+    'tag delete success'=>'تم الحذف بنجاح',
+    'tag delete error'=>'خظا في حذف البيانات',
 
 
 ];
