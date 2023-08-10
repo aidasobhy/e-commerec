@@ -56,9 +56,13 @@ class Category extends Model
     }
 
 
-
     public function _parent()
     {
         return $this->belongsTo(self::class,'parent_id');
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active',1);
     }
 }

@@ -29,6 +29,16 @@ return [
     'add brands'=>'Add New Brand',
 
     'tags'=>' Tags',
-    'add tag'=>'Add New Tag'
+    'add tag'=>'Add New Tag',
+
+
+    'products'=>'Products',
+    'add product'=>'Add New Product',
+
+    'attributes'=>'Product Attributes',
+    'add attribute'=>'Add New Attribute',
+
+    'options'=>'Options',
+    'add option'=>'Add New Option',
 ];
 

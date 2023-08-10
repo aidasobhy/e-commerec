@@ -19,7 +19,7 @@ class BrandsController extends Controller
 
     public function index()
     {
-        $brands = Brand::orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $brands = Brand::orderBy('id', 'DESC')->get();
         return view('dashboard.brands.index', compact('brands'));
     }
 
@@ -134,6 +134,8 @@ class BrandsController extends Controller
 //            if (File::exists($image_path)) {
 //                File::delete($image_path);
 //            }
+
+            $brand->translations()->delete();
             $brand->delete();
             return $this->getSuccessMessageDelete();
 

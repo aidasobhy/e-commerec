@@ -57,4 +57,29 @@ return [
     'tag delete error'=>'خظا في حذف البيانات',
 
 
+    'product update success'=>'تم التحديث بنجاح',
+    'product update error'=>'خظا في تحديث البيانات',
+    'product add success'=>'تم الاضافة بنجاح',
+    'product add error'=>'خظا في اضافة البيانات',
+    'product delete success'=>'تم الحذف بنجاح',
+    'product delete error'=>'خظا في حذف البيانات',
+
+
+
+    'attribute update success'=>'تم التحديث بنجاح',
+    'attribute update error'=>'خظا في تحديث البيانات',
+    'attribute add success'=>'تم الاضافة بنجاح',
+    'attribute add error'=>'خظا في اضافة البيانات',
+    'attribute delete success'=>'تم الحذف بنجاح',
+    'attribute delete error'=>'خظا في حذف البيانات',
+
+
+    'option update success'=>'تم التحديث بنجاح',
+    'option update error'=>'خظا في تحديث البيانات',
+    'option add success'=>'تم الاضافة بنجاح',
+    'option add error'=>'خظا في اضافة البيانات',
+    'option delete success'=>'تم الحذف بنجاح',
+    'option delete error'=>'خظا في حذف البيانات',
+
+
 ];

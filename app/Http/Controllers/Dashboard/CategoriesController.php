@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Enumerations\CategoryType;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use App\Traits\CategoryTrait;
@@ -16,7 +17,7 @@ class CategoriesController extends Controller
 
     public function index()
     {
-        $categories = Category::with('_parent')->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        $categories = Category::with('_parent')->orderBy('id', 'DESC')->get();
         return view('dashboard.categories.index', compact('categories'));
     }
 
@@ -42,7 +43,7 @@ class CategoriesController extends Controller
                 $request->request->add(['is_active' => 1]);
 
             //   f user choose main category
-            if ($request->type == 1) {
+            if ($request->type ==CategoryType::mainCategory) {
                 $request->request->add(['parent_id' => null]);
             }
 
