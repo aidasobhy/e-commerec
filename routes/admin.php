@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 
-define('PAGINATION_COUNT',10);
+define('PAGINATION_COUNT', 5);
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -16,14 +16,13 @@ define('PAGINATION_COUNT',10);
 */
 
 
-
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+    ], function () {
 
-    Route::group(['namespace' => 'Dashboard', 'middleware' => 'auth:admin','prefix'=>'admin'], function () {
+    Route::group(['namespace' => 'Dashboard', 'middleware' => 'auth:admin', 'prefix' => 'admin'], function () {
         Route::get('/', 'DashboardController@index')->name('admin.dashboard');
         Route::get('logout', 'LogoutController@logout')->name('admin.logout');
         #####################begin setting shippings routes##############
@@ -53,7 +52,6 @@ Route::group(
         ############################end categories routes######
 
 
-
         ############################begin brands routes######
         Route::group(['prefix' => 'brands'], function () {
             Route::get('/', 'BrandsController@index')->name('admin.brands');
@@ -79,11 +77,53 @@ Route::group(
         ############################end tags routes######
 
 
+        ############################begin products routes######
+        Route::group(['prefix' => 'products'], function () {
+            Route::get('/', 'ProductsController@index')->name('admin.products');
+            Route::get('general-information', 'ProductsController@create')->name('admin.general.products.create');
+            Route::post('store-general-information', 'ProductsController@store')->name('admin.general.products.store');
+
+            Route::get('price/{product_id}', 'ProductsController@getPrice')->name('admin.products.price.create');
+            Route::post('price', 'ProductsController@saveProductPrice')->name('admin.products.price.store');
+
+            Route::get('stock/{product_id}', 'ProductsController@getStock')->name('admin.products.stock.create');
+            Route::post('stock', 'ProductsController@saveProductStock')->name('admin.products.stock.store');
+
+            Route::get('images/{product_id}', 'ProductsController@addImages')->name('admin.products.images.create');
+            Route::post('store-images-in-folder', 'ProductsController@saveProductImages')->name('admin.products.images.store');
+            Route::post('store-images-in-database', 'ProductsController@saveProductImagesDB')->name('admin.products.images.store.db');
+
+            ##################attribute product##################
+             Route::group(['prefix' => 'attributes'], function () {
+                Route::get('/', 'AttributesController@index')->name('admin.attributes');
+                Route::get('create', 'AttributesController@create')->name('admin.attributes.create');
+                Route::post('store', 'AttributesController@store')->name('admin.attributes.store');
+                Route::get('edit/{id}', 'AttributesController@edit')->name('admin.attributes.edit');
+                Route::post('update/{id}', 'AttributesController@update')->name('admin.attributes.update');
+                Route::get('delete/{id}', 'AttributesController@delete')->name('admin.attributes.delete');
+                ##################attribute product##################
+            });
+
+            ##################attribute product##################
+            Route::group(['prefix' => 'options'], function () {
+                Route::get('/', 'OptionsController@index')->name('admin.options');
+                Route::get('create', 'OptionsController@create')->name('admin.options.create');
+                Route::post('store', 'OptionsController@store')->name('admin.options.store');
+                Route::get('edit/{id}', 'OptionsController@edit')->name('admin.options.edit');
+                Route::post('update/{id}', 'OptionsController@update')->name('admin.options.update');
+                Route::get('delete/{id}', 'OptionsController@delete')->name('admin.options.delete');
+                ##################attribute product##################
+            });
+
+
+        });
+        ############################end products routes######
+
+
     });
 
 
-
-    Route::group(['namespace' => 'Dashboard', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
+    Route::group(['namespace' => 'Dashboard', 'middleware' => 'guest:admin', 'prefix' => 'admin'], function () {
         Route::get('login', 'LoginController@login')->name('admin.login');
         Route::post('login', 'LoginController@postLogin')->name('admin.post.login');
     });

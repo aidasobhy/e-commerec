@@ -17,4 +17,5 @@ class Tag extends Model
 
     protected $translatedAttributes =['name'];
 
+
 }

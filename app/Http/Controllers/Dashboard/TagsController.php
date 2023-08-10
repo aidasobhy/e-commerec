@@ -24,7 +24,7 @@ class TagsController extends Controller
 
     public function index()
     {
-        $tags = Tag::paginate(PAGINATION_COUNT);
+        $tags = Tag::get();
         return view('dashboard.tags.index', compact('tags'));
     }
 
