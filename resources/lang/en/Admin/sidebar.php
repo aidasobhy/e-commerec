@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'dashboard'=>'Dashboard',
     'settings'=>'Settings',
     'shipping method'=>'Shipping Method',
     'free shipping'=>'Free Shipping',
@@ -31,6 +32,9 @@ return [
     'tags'=>' Tags',
     'add tag'=>'Add New Tag',
 
+    'roles'=>' Roles',
+    'add role'=>'Add New Role',
+
 
     'products'=>'Products',
     'add product'=>'Add New Product',
@@ -40,5 +44,12 @@ return [
 
     'options'=>'Options',
     'add option'=>'Add New Option',
+
+    'slider images'=>'Slider Images',
+    'main slider'=>'Main Slider',
+    'sliders'=>'Sliders',
+
+    'users'=>'Control Panel Users',
+    'add user'=>'Add New User',
 ];
 

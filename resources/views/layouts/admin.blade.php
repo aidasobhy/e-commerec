@@ -76,6 +76,7 @@
 @notify_js
 @notify_render
 
+<script src="//js.pusher.com/3.1/pusher.min.js"></script>
 <!-- BEGIN VENDOR JS-->
 <script src="{{asset('assets/admin/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
 <!-- BEGIN VENDOR JS-->
@@ -122,6 +123,23 @@
 <script src="{{asset('assets/admin/js/scripts/modal/components-modal.js')}}" type="text/javascript"></script>
 
 <script src="{{asset('assets/admin/vendors/js/extensions/dropzone.min.js')}}" type="text/javascript"></script>
+
+<script>
+    var previousCounter = $('.notification-counter').text(); //8
+    var notificationsCount = parseInt(previousCounter);
+    // Enable pusher logging - don't include this in production
+    var pusher = new Pusher('a123460cd3a68f735262', {
+        encrypted: true
+    });
+    //Pusher.logToConsole = true;
+    // Subscribe to the channel we specified in our Laravel Event
+    var channel = pusher.subscribe('order');
+    // Bind a function to a Our Event
+    channel.bind('App\\Events\\NewOrder', function(data) {
+        notificationsCount += 1;
+        $('.notification-counter').text(notificationsCount)
+    });
+</script>
 <script>
     $('#meridians1').timeDropper({
         meridians: true,
