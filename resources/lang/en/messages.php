@@ -75,5 +75,16 @@ return [
     'option delete error' => 'Error In Deleting',
     'option add success' => 'Brand Added Successfully',
 
+    'error code'=>'The code you entered is not valid',
+
+    'role add error' => 'Error In Add Role',
+    'role update success' => 'Updated Added Successfully',
+    'role update error' => 'Error In Updating',
+    'role delete success' => ' Tag Deleted Successfully',
+    'role delete error' => 'Error In Deleting',
+    'role add success' => 'Role Added Successfully',
+
+    'user add success'=>'User Added Successfully',
+    'user add error'=>'Error In Add User',
 
 ];

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Astrotomic\Translatable\Translatable;
@@ -38,7 +37,7 @@ class Setting extends Model
     public static function set($key, $value)
     {
         if ($key === 'translatable') {
-            return static::setTranslatableSettings($value);
+            return self::setTranslatableSettings($value);
         }
 
         if(is_array($value))
@@ -59,11 +58,12 @@ class Setting extends Model
     public static function setTranslatableSettings($settings = [])
     {
         foreach ($settings as $key => $value) {
-            static::updateOrCreate(['key' => $key], [
+            self::updateOrCreate(['key' => $key], [
                 'is_translatable' => true,
                 'value' => $value,
             ]);
         }
+        return true;
     }
 
 }

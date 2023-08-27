@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,9 @@ Route::get('test', function () {
    return $cat;
 
 });
+Auth::guard('web')->loginUsingId(3);
+
+Auth::routes();
+
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -69,6 +69,11 @@ class Product extends Model
         return $this->hasMany(Option::class,'product_id');
     }
 
+    public function images()
+    {
+        return $this->hasMany(Image::class,'product_id');
+    }
+
     //Imatuator
 
     public function scopeActive()
@@ -80,6 +85,29 @@ class Product extends Model
     {
         return $this->is_active==0?__('Admin\products.no_active'):__('Admin\products.active');
     }
+
+    public function hasStock($quantity)
+    {
+        return $this->qty >= $quantity;
+    }
+
+    public function outOfStock()
+    {
+        return $this->qty === 0;
+    }
+
+    public function inStock()
+    {
+        return $this->qty >= 1;
+    }
+
+    public function getTotal($converted = true)
+    {
+        return $total =  $this->special_price ?? $this -> price;
+
+    }
+
+
 
 
 }

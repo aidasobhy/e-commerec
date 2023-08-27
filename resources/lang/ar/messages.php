@@ -81,5 +81,18 @@ return [
     'option delete success'=>'تم الحذف بنجاح',
     'option delete error'=>'خظا في حذف البيانات',
 
+    'error code'=>'الكود الذي ادخلته غير صحيح',
+
+
+
+    'role update success'=>'تم التحديث بنجاح',
+    'role update error'=>'خظا في تحديث البيانات',
+    'role add success'=>'تم الاضافة بنجاح',
+    'role add error'=>'خظا في اضافة البيانات',
+    'role delete success'=>'تم الحذف بنجاح',
+    'role delete error'=>'خظا في حذف البيانات',
+
+    'user add success'=>'تم الاضافة بنجاح',
+    'user add error'=>'خظا في اضافة البيانات',
 
 ];

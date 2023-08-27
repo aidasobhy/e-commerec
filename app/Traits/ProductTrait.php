@@ -23,7 +23,7 @@ trait ProductTrait
         return redirect()->route('admin.products')->with(['error' => __('messages.product update error')]);
     }
 
-    public function BrandNotFoundMessage()
+    public function ProductNotFoundMessage()
     {
         return redirect()->route('admin.products')->with(['error' => __('Admin\products.product not found')]);;
     }
